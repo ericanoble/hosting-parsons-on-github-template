@@ -253,7 +253,8 @@ If want each problem to be it's own page, you can use relative path links at the
 <p> 
     <input id="1_2_C1-feedbackLink" value="Get Feedback" type="button" /> 
     <input id="1_2_C1-newInstanceLink" value="Reset Problem" type="button" /> 
-</p> 
+</p>
+<div id="1_2_C1-feedback"></div>
 <script type="text/javascript"> 
 (function(){
   var initial = "from microbit import *\n" +
