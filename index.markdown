@@ -265,14 +265,13 @@ If want each problem to be it's own page, you can use relative path links at the
     "        display.scroll(&#039;Eva&#039;)";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "1_2_C1-sortable",
+    "trashId": "1_2_C1-sortableTrash",
     "max_wrong_lines": 10,
     "grader": ParsonsWidget._graders.LineBasedGrader,
     "exec_limit": 2500,
     "can_indent": true,
     "x_indent": 50,
-    "lang": "en",
-    "show_feedback": true,
-    "python3": true
+    "lang": "en"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
