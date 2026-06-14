@@ -280,8 +280,14 @@ If want each problem to be it's own page, you can use relative path links at the
       parsonsPuzzle.shuffleLines(); 
   }); 
   $("#1_2_C1-feedbackLink").click(function(event){ 
-      event.preventDefault(); 
-      parsonsPuzzle.getFeedback(); 
-  }); 
+      event.preventDefault();
+      var feedback = parsonsPuzzle.getFeedback();
+      var message = feedback.html || feedback.feedback;
+      if (!message && feedback.length) {
+          message = feedback.join('\n');
+      }
+      message = message && !feedback.success ? message : 'Congratulations on solving your Parsons Problem!';
+      $("#1_2_C1-feedback").html(message);
+  });
 })(); 
 </script>
