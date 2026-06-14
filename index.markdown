@@ -254,7 +254,7 @@ If want each problem to be it's own page, you can use relative path links at the
     <input id="1_2_C1-feedbackLink" value="Get Feedback" type="button" /> 
     <input id="1_2_C1-newInstanceLink" value="Reset Problem" type="button" /> 
 </p>
-<div id="1_2_C1-feedback"></div>
+<fieldset id="1_2_C1-feedback" style="margin-top:20px;"><legend>Feedback:</legend><div id="1_2_C1-feedback-text"></div></fieldset>
 <script type="text/javascript"> 
 (function(){
   var initial = "from microbit import *\n" +
@@ -275,9 +275,11 @@ If want each problem to be it's own page, you can use relative path links at the
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
-  $("#1_2_C1-newInstanceLink").click(function(event){ 
-      event.preventDefault(); 
-      parsonsPuzzle.shuffleLines(); 
+    $("#1_2_C1-newInstanceLink").click(function(event){ 
+          event.preventDefault(); 
+          parsonsPuzzle.shuffleLines();
+          $("#1_2_C1-feedback-text").html('');
+      });
   }); 
   $("#1_2_C1-feedbackLink").click(function(event){ 
       event.preventDefault();
@@ -287,7 +289,7 @@ If want each problem to be it's own page, you can use relative path links at the
           message = feedback.join('\n');
       }
       message = message && !feedback.success ? message : 'Congratulations on solving your Parsons Problem!';
-      $("#1_2_C1-feedback").html(message);
+      $("#1_2_C1-feedback-text").html(message)
   });
 })(); 
 </script>
