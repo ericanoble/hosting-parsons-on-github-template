@@ -292,4 +292,4 @@ If want each problem to be it's own page, you can use relative path links at the
   });
 })(); 
 </script>
-[Next](./parsons/microbit/1_1_HelloWorld.html)
+[Showing a string](./parsons/microbit/1_1_C2_ShowString.html)
