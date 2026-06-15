@@ -292,7 +292,7 @@ If want each problem to be it's own page, you can use relative path links at the
   });
 })(); 
 </script>
-[1_1_C1 Showing a number](./parsons/microbit/1_1_C1_ShowNumber.html)
+[1_1_C1 Showing a number](./parsons/microbit/1_1_C1_ShowNumber.html)<br>
 [1_1_C2 Showing a string](./parsons/microbit/1_1_C2_ShowString.html)
 [1_2_C1 Showing your names](./parsons/microbit/1_2_C1_ShowNames.html)
 [1_2_C2 Showing icons](./parsons/microbit/1_2_C2_ShowIcons.html)
@@ -302,7 +302,7 @@ If want each problem to be it's own page, you can use relative path links at the
 [1_3_C2 Graphing light levels](./parsons/microbit/1_3_C2_GraphLightLevel.html)
 [1_3_C3 Light-activated](./parsons/microbit/1_3_C3_LightActivated.html)
 [1_4_C1 Using variables](./parsons/microbit/1_4_C1_UseVariables.html)
-[1_4_C2 Accelerometer triggers](./parsons/microbit/1_4_C2_AccelerometerTrigers.html)
+[1_4_C2 Accelerometer triggers](./parsons/microbit/1_4_C2_AccelerometerTriggers.html)
 [1_4_C3 Changing direction](./parsons/microbit/1_4_C3_ChangeDirection.html)
 [1_4_C4 Counting your steps](./parsons/microbit/1_4_C4_CountSteps.html)
 [1_5_C1 Sending "Hello World!"](./parsons/microbit/1_5_C1_SendHelloWorld.html)
