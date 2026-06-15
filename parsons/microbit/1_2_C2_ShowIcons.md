@@ -2,7 +2,7 @@
 layout: default
 title: Showing icons
 ---
-### Showing icons
+## Showing icons
 <div id="1_2_C2-sortableTrash" class="sortable-code"></div> 
 <div id="1_2_C2-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -40,7 +40,8 @@ title: Showing icons
 })(); 
 </script>
 
-### Extension: Custom icon
+## Extension
+### Custom icon
 <div id="1_2_C2_E1-sortableTrash" class="sortable-code"></div> 
 <div id="1_2_C2_E1-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
