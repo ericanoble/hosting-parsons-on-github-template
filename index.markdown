@@ -244,7 +244,7 @@ When you host multiple Parson's problems on a single markdown page, you need to 
 If want each problem to be it's own page, you can use relative path links at the bottom of each of your markdown pages as seen below. If you want students to be able to return to previous problems in this format, consider adding previous links or link to a table of contents like page.
 
 ### Example Next Link
-[Next](./parsons/example1.html)
+[Next](./parsons/1_1_HelloWorld.html)
 
 ### 1_2_C1 Showing your names
 <div id="1_2_C1-sortableTrash" class="sortable-code"></div> 
@@ -292,3 +292,4 @@ If want each problem to be it's own page, you can use relative path links at the
   });
 })(); 
 </script>
+[Next](./parsons/microbit/1_1_HelloWorld.html)
