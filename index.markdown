@@ -292,7 +292,7 @@ If want each problem to be it's own page, you can use relative path links at the
   });
 })(); 
 </script>
-<p>[1_1_C1 Showing a number](./parsons/microbit/1_1_C1_ShowNumber.html)</p>
+[1_1_C1 Showing a number](./parsons/microbit/1_1_C1_ShowNumber.html)
 [1_1_C2 Showing a string](./parsons/microbit/1_1_C2_ShowString.html)
 [1_2_C1 Showing your names](./parsons/microbit/1_2_C1_ShowNames.html)
 [1_2_C2 Showing icons](./parsons/microbit/1_2_C2_ShowIcons.html)
