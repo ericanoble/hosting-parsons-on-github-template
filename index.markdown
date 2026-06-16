@@ -244,54 +244,9 @@ When you host multiple Parson's problems on a single markdown page, you need to 
 If want each problem to be it's own page, you can use relative path links at the bottom of each of your markdown pages as seen below. If you want students to be able to return to previous problems in this format, consider adding previous links or link to a table of contents like page.
 
 ### Example Next Link
-[Next](./parsons/1_1_HelloWorld.html)
+[Next](./parsons/example1.html)
 
-### 1_2_C1 Showing your names
-<div id="1_2_C1-sortableTrash" class="sortable-code"></div> 
-<div id="1_2_C1-sortable" class="sortable-code"></div> 
-<div style="clear:both;"></div> 
-<p> 
-    <input id="1_2_C1-feedbackLink" value="Get Feedback" type="button" /> 
-    <input id="1_2_C1-newInstanceLink" value="Reset Problem" type="button" /> 
-</p>
-<fieldset id="1_2_C1-feedback" style="margin-top:20px;"><legend>Feedback:</legend><div id="1_2_C1-feedback-text"></div></fieldset>
-<script type="text/javascript"> 
-(function(){
-  var initial = "from microbit import *\n" +
-    "while True:\n" +
-    "    if button_a.is_pressed():\n" +
-    "        display.scroll(&#039;Nick&#039;)\n" +
-    "    if button_b.is_pressed():\n" +
-    "        display.scroll(&#039;Eva&#039;)";
-  var parsonsPuzzle = new ParsonsWidget({
-    "sortableId": "1_2_C1-sortable",
-    "trashId": "1_2_C1-sortableTrash",
-    "max_wrong_lines": 10,
-    "grader": ParsonsWidget._graders.LineBasedGrader,
-    "exec_limit": 2500,
-    "can_indent": true,
-    "x_indent": 50,
-    "lang": "en"
-  });
-  parsonsPuzzle.init(initial);
-  parsonsPuzzle.shuffleLines();
-  $("#1_2_C1-newInstanceLink").click(function(event){ 
-      event.preventDefault(); 
-      parsonsPuzzle.shuffleLines();
-      $("#1_2_C1-feedback-text").html('');
-  }); 
-  $("#1_2_C1-feedbackLink").click(function(event){ 
-      event.preventDefault();
-      var feedback = parsonsPuzzle.getFeedback();
-      var message = feedback.html || feedback.feedback;
-      if (!message && feedback.length) {
-          message = feedback.join('\n');
-      }
-      message = message && !feedback.success ? message : 'Congratulations on solving your Parsons Problem!';
-      $("#1_2_C1-feedback-text").html(message);
-  });
-})(); 
-</script>
+### Bitlink MicroPython micro:bit Parsons puzzles
 [1_1_C1 Showing a number](./parsons/microbit/1_1_C1_ShowNumber.html)
 [1_1_C2 Showing a string](./parsons/microbit/1_1_C2_ShowString.html)
 [1_2_C1 Showing your names](./parsons/microbit/1_2_C1_ShowNames.html)
