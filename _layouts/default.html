@@ -25,18 +25,21 @@
     <script src="https://js-parsons.github.io/js/js-parsons/lib/lis.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.sound.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/prettify.js"></script>
-<script src="https://codio.github.io/parsons-puzzle-ui/dist/parsons/parsons.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    var _OriginalParsonsWidget = ParsonsWidget;
-    window.ParsonsWidget = function(options) {
-        var puzzle = new _OriginalParsonsWidget(options);
-        var prefix = options.sortableId.replace(/-sortable$/, '');
-        window['_parsons_' + prefix] = puzzle;
-        return puzzle;
-    };
-    window.ParsonsWidget._graders = _OriginalParsonsWidget._graders;
+    <script src="https://codio.github.io/parsons-puzzle-ui/dist/parsons/parsons.js"></script>
 
+<script type="text/javascript">
+// Patch ParsonsWidget immediately so all puzzles are auto-registered
+var _OriginalParsonsWidget = ParsonsWidget;
+window.ParsonsWidget = function(options) {
+    var puzzle = new _OriginalParsonsWidget(options);
+    var prefix = options.sortableId.replace(/-sortable$/, '');
+    window['_parsons_' + prefix] = puzzle;
+    return puzzle;
+};
+window.ParsonsWidget._graders = _OriginalParsonsWidget._graders;
+
+$(document).ready(function() {
+    // Add feedback fieldset under every puzzle's buttons
     setTimeout(function() {
         $("input[id$='-feedbackLink']").each(function() {
             var prefix = this.id.replace('-feedbackLink', '');
