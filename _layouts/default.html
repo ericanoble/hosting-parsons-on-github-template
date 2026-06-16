@@ -25,7 +25,42 @@
     <script src="https://js-parsons.github.io/js/js-parsons/lib/lis.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.sound.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/prettify.js"></script>
-    <script src="https://js-parsons.github.io/js/js-parsons/parsons.js"></script>
+<script src="https://codio.github.io/parsons-puzzle-ui/dist/parsons/parsons.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    setTimeout(function() {
+        $("input[id$='-feedbackLink']").each(function() {
+            var prefix = this.id.replace('-feedbackLink', '');
+            if ($("#" + prefix + "-feedback").length === 0) {
+                $(this).closest('p').after(
+                    '<fieldset id="' + prefix + '-feedback" style="margin-top:20px;">' +
+                    '<legend>Feedback:</legend>' +
+                    '<div id="' + prefix + '-feedback-text"></div>' +
+                    '</fieldset>'
+                );
+            }
+        });
+        $(document).on("click", "input[id$='-feedbackLink']", function() {
+            var prefix = this.id.replace('-feedbackLink', '');
+            var puzzle = window['puzzle_' + prefix];
+            if (!puzzle) {
+                puzzle = window['parsonsPuzzle'];
+            }
+            if (puzzle) {
+                var feedback = puzzle.getFeedback();
+                var message = feedback.html || feedback.feedback;
+                if (!message && feedback.length) { message = feedback.join('\n'); }
+                message = message && !feedback.success ? message : 'Congratulations on solving your Parsons Problem!';
+                $("#" + prefix + "-feedback-text").html(message);
+            }
+        });
+        $(document).on("click", "input[id$='-newInstanceLink']", function() {
+            var prefix = this.id.replace('-newInstanceLink', '');
+            $("#" + prefix + "-feedback-text").html('');
+        });
+    }, 500);
+});
+</script>
 
 {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
