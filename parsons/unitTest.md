@@ -28,7 +28,7 @@ title: Unit Test
     "python3": true,
     "trashId": "unitTest-sortableTrash",
     "unittest_code_prepend": "",
-    "unittests": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def test_0(self):\n    self.assertEqual(triangle_area(6, 4),12.0,)\n  def test_1(self):\n    self.assertEqual(triangle_area(10, 5),25.0,)\n  def test_2(self):\n    self.assertEqual(triangle_area(3, 8),12.0,)\n_test_result = myTests().main()"
+    "unittests": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def test_0(self):\n    self.assertEqual(triangle_area(6, 4),12.0,triangle_area(6, 4) should return 12.0)\n  def test_1(self):\n    self.assertEqual(triangle_area(10, 5),25.0,triangle_area(10, 5) should return 25.0)\n  def test_2(self):\n    self.assertEqual(triangle_area(3, 8),12.0,triangle_area(3, 8) should return 12.0)\n_test_result = myTests().main()"
   });
   parsonsPuzzle.init(initial);
   parsonsPuzzle.shuffleLines();
