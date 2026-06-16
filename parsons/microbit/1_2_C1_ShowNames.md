@@ -15,10 +15,8 @@ title: Showing your names
 (function(){
   var initial = "from microbit import *\n" +
     "while True:\n" +
-    "    if button_a.is_pressed():\n" +
-    "        display.scroll(&#039;Nick&#039;)\n" +
-    "    if button_b.is_pressed():\n" +
-    "        display.scroll(&#039;Eva&#039;)";
+    "    if button_a.is_pressed():\n     display.scroll(&#039;Nick&#039;)\n" +
+    "    if button_b.is_pressed():\n     display.scroll(&#039;Eva&#039;)";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "1_2_C1-sortable",
     "max_wrong_lines": 10,
