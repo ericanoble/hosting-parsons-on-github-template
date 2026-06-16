@@ -33,6 +33,27 @@ var _OriginalParsonsWidget = ParsonsWidget;
 window.ParsonsWidget = function(options) {
     var prefix = options.sortableId.replace(/-sortable$/, '');
 
+    // Fix unit test formatting bugs from the generator
+    if (options.unittests) {
+        options.unittests = options.unittests.split('\n').map(function(line) {
+            var m = line.match(/^(\s*self\.assertEqual\()(.*)(\))$/);
+            if (!m) return line;
+            var args = m[2], depth = 0, commas = [];
+            for (var i = 0; i < args.length; i++) {
+                if (args[i]==='(') depth++;
+                else if (args[i]===')') depth--;
+                else if (args[i]===',' && depth===0) commas.push(i);
+            }
+            if (commas.length < 2) return line;
+            var a1 = args.slice(0, commas[0]);
+            var a2 = args.slice(commas[0]+1, commas[1]).trim();
+            var a3 = args.slice(commas[1]+1).trim();
+            if (/^-?\d+$/.test(a2)) a2 += '.0';
+            if (a3 && a3[0]!=="'" && a3[0]!=='"') a3 = "'"+a3+"'";
+            return m[1]+a1+','+a2+','+a3+m[3];
+        }).join('\n');
+    }
+
     // If this is a turtle puzzle, set unique canvas IDs and insert canvas elements
     if (options.turtleModelCode) {
         options.turtleModelCanvas = prefix + '-modelCanvas';
