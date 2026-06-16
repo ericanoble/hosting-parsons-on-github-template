@@ -19,8 +19,8 @@
     <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.min.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery-ui.min.js"></script>
     <script src="https://js-parsons.github.io/js/jquery.ui.touch-punch.min.js"></script>
-    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt.js"></script>
-    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt-stdlib.js"></script>
+    <script src="https://codio.github.io/parsons-puzzle-ui/dist/parsons/lib/skulpt.js"></script>
+    <script src="https://codio.github.io/parsons-puzzle-ui/dist/parsons/lib/skulpt-stdlib.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/underscore-min.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/lis.js"></script>
     <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.sound.js"></script>
@@ -31,8 +31,30 @@
 // Patch ParsonsWidget immediately so all puzzles are auto-registered
 var _OriginalParsonsWidget = ParsonsWidget;
 window.ParsonsWidget = function(options) {
-    var puzzle = new _OriginalParsonsWidget(options);
     var prefix = options.sortableId.replace(/-sortable$/, '');
+
+    // If this is a turtle puzzle, set unique canvas IDs and insert canvas elements
+    if (options.turtleModelCode) {
+        options.turtleModelCanvas = prefix + '-modelCanvas';
+        options.turtleStudentCanvas = prefix + '-studentCanvas';
+
+        // Insert canvas elements after the buttons paragraph
+        var buttonP = $("#" + prefix + "-feedbackLink").closest('p');
+        if (buttonP.length && $("#" + prefix + "-modelCanvas").length === 0) {
+            buttonP.after(
+                '<div style="margin-top:10px;">' +
+                '<h4>Model Drawing</h4>' +
+                '<canvas id="' + prefix + '-modelCanvas" width="400" height="200"></canvas>' +
+                '</div>' +
+                '<div style="margin-top:10px;">' +
+                '<h4>Your Drawing</h4>' +
+                '<canvas id="' + prefix + '-studentCanvas" width="400" height="200"></canvas>' +
+                '</div>'
+            );
+        }
+    }
+
+    var puzzle = new _OriginalParsonsWidget(options);
     window['_parsons_' + prefix] = puzzle;
     return puzzle;
 };
