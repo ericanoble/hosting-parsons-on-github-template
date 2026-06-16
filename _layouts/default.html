@@ -28,6 +28,15 @@
 <script src="https://codio.github.io/parsons-puzzle-ui/dist/parsons/parsons.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
+    var _OriginalParsonsWidget = ParsonsWidget;
+    window.ParsonsWidget = function(options) {
+        var puzzle = new _OriginalParsonsWidget(options);
+        var prefix = options.sortableId.replace(/-sortable$/, '');
+        window['_parsons_' + prefix] = puzzle;
+        return puzzle;
+    };
+    window.ParsonsWidget._graders = _OriginalParsonsWidget._graders;
+
     setTimeout(function() {
         $("input[id$='-feedbackLink']").each(function() {
             var prefix = this.id.replace('-feedbackLink', '');
@@ -40,25 +49,24 @@ $(document).ready(function() {
                 );
             }
         });
-        $(document).on("click", "input[id$='-feedbackLink']", function() {
-            var prefix = this.id.replace('-feedbackLink', '');
-            var puzzle = window['puzzle_' + prefix];
-            if (!puzzle) {
-                puzzle = window['parsonsPuzzle'];
-            }
-            if (puzzle) {
-                var feedback = puzzle.getFeedback();
-                var message = feedback.html || feedback.feedback;
-                if (!message && feedback.length) { message = feedback.join('\n'); }
-                message = message && !feedback.success ? message : 'Congratulations on solving your Parsons Problem!';
-                $("#" + prefix + "-feedback-text").html(message);
-            }
-        });
-        $(document).on("click", "input[id$='-newInstanceLink']", function() {
-            var prefix = this.id.replace('-newInstanceLink', '');
-            $("#" + prefix + "-feedback-text").html('');
-        });
-    }, 500);
+    }, 100);
+
+    $(document).on("click", "input[id$='-feedbackLink']", function() {
+        var prefix = this.id.replace('-feedbackLink', '');
+        var puzzle = window['_parsons_' + prefix];
+        if (puzzle) {
+            var feedback = puzzle.getFeedback();
+            var message = feedback.html || feedback.feedback;
+            if (!message && feedback.length) { message = feedback.join('\n'); }
+            message = message && !feedback.success ? message : 'Congratulations on solving your Parsons Problem!';
+            $("#" + prefix + "-feedback-text").html(message);
+        }
+    });
+
+    $(document).on("click", "input[id$='-newInstanceLink']", function() {
+        var prefix = this.id.replace('-newInstanceLink', '');
+        $("#" + prefix + "-feedback-text").html('');
+    });
 });
 </script>
 
