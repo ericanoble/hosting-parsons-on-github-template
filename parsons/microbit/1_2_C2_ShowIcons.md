@@ -54,7 +54,7 @@ title: Showing icons
   var initial = "from microbit import *\n" +
     "while True:\n" +
     "    if button_a.is_pressed():\n" +
-    "        display.show(Image(\n&#039;05050:&#039;\n&#039;05050:&#039;\n&#039;05050:&#039;\n&#039;99999:&#039;\n&#039;09990&#039;))";
+    "        display.show(Image(&#039;05050:&#039; \n                   &#039;05050:&#039; \n                   &#039;05050:&#039; \n                   &#039;99999:&#039; \n                   &#039;09990&#039;))";
   var parsonsPuzzle = new ParsonsWidget({
     "sortableId": "1_2_C2_E1-sortable",
     "max_wrong_lines": 10,
