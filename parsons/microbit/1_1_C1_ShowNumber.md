@@ -3,6 +3,8 @@ layout: default
 title: Showing a number
 ---
 ### Showing a number
+Re-arrange the blocks below so that the number 8 appears on the micro:bit display.
+
 <div id="1_1_C1-sortableTrash" class="sortable-code"></div> 
 <div id="1_1_C1-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
