@@ -3,6 +3,7 @@ layout: default
 title: Showing a string
 ---
 ### Showing a string
+Use the blocks below to construct a program so that the words "Hello World!" appear on the micro:bit display.
 <div id="1_1_C2-sortableTrash" class="sortable-code"></div> 
 <div id="1_1_C2-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
