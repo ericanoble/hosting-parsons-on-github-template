@@ -39,6 +39,8 @@ title: Detecting light level
   }); 
 })(); 
 </script>
+## Extension
+### Different input
 <div id="1_3_C1_E1-sortableTrash" class="sortable-code"></div> 
 <div id="1_3_C1_E1-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
@@ -48,7 +50,7 @@ title: Detecting light level
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "# Instead of button input use input from the touch logo, accelerometer, microphone, compass, light sensor or temperature sensor\n" +
+  var initial = "# Instead of button input use input from the touch logo, \n# accelerometer, microphone, compass, light sensor \n# or temperature sensor\n" +
     "from microbit import *\n" +
     "while True:\n" +
     "    if pin_logo.is_touched():\n" +
