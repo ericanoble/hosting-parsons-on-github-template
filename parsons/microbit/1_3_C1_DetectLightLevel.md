@@ -50,7 +50,7 @@ title: Detecting light level
 </p> 
 <script type="text/javascript"> 
 (function(){
-  var initial = "# Instead of button input use input from the touch logo, \n# accelerometer, microphone, compass, light sensor \n# or temperature sensor\n" +
+  var initial = "# Instead of button input use input from the touch logo, \\n# accelerometer, microphone, compass, light sensor \\n# or temperature sensor\n" +
     "from microbit import *\n" +
     "while True:\n" +
     "    if pin_logo.is_touched():\n" +
