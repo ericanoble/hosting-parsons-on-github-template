@@ -13,8 +13,7 @@ title: Light-activated
 (function(){
   var initial = "from microbit import *\n" +
     "while True:\n" +
-    "    if display.read_light_level() &lt; 50:\n" +
-    "        display.show(Image(&#039;90909:&#039; \n                   &#039;09990:&#039;\n                   &#039;99999:&#039; \n                   &#039;09990:&#039; \n                   &#039;90909&#039;))\n" +
+    "    if display.read_light_level() &lt; 50: \\n     display.show(Image(&#039;90909:&#039; \n                   &#039;09990:&#039;\n                   &#039;99999:&#039; \n                   &#039;09990:&#039; \n                   &#039;90909&#039;))\n" +
     "    else:\n" +
     "        display.clear()";
   var parsonsPuzzle = new ParsonsWidget({
