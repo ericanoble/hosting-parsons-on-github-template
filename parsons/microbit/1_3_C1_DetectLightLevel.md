@@ -2,6 +2,7 @@
 layout: default
 title: Detecting light level
 ---
+##Detecting light level
 <div id="1_3_C1-sortableTrash" class="sortable-code"></div> 
 <div id="1_3_C1-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
