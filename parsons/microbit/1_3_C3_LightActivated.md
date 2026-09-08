@@ -2,6 +2,7 @@
 layout: default
 title: Light-activated
 ---
+## Light-activated
 <div id="1_3_C3-sortableTrash" class="sortable-code"></div> 
 <div id="1_3_C3-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
