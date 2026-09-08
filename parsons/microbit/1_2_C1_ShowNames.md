@@ -3,7 +3,7 @@ layout: default
 title: Showing your names
 ---
 
-### Showing your names
+## Showing your names
 <div id="1_2_C1-sortableTrash" class="sortable-code"></div> 
 <div id="1_2_C1-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
