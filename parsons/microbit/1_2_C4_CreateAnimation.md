@@ -2,7 +2,10 @@
 layout: default
 title: Creating an animation
 ---
-## 1_2_C4 Creating an animation_E2_Animation with built in and custom images
+## Creating an animation
+
+## Extension
+### Animation with built in and custom images
 <div id="1_2_C4_E2-sortableTrash" class="sortable-code"></div> 
 <div id="1_2_C4_E2-sortable" class="sortable-code"></div> 
 <div style="clear:both;"></div> 
