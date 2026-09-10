@@ -23,13 +23,13 @@ title: Creating an animation
     "while True:\n" +
     "    if button_a.is_pressed and button_b.is_pressed():\n" +
     "        display.show(Image.HEART)\n" +
-    "        sleep(500)\n" +
+    "        sleep(500)" +
     "        display.show(Image(&quot;07070:&quot;\\n                   &quot;77777:&quot;\\n                   &quot;77777:&quot;\\n                   &quot;07770:&quot;\\n                   &quot;00700&quot;))\\n" +
-    "        sleep(500)\n" +
+    "        sleep(500)" +
     "        display.show(Image(&quot;05050:&quot;\\n                   &quot;55555:&quot;\\n                   &quot;55555:&quot;\\n                   &quot;05550:&quot;\\n                   &quot;00500&quot;))\\n" +
-    "        sleep(500)\\n" +
+    "        sleep(500)" +
     "        display.show(Image(&quot;03030:&quot;\\n                   &quot;33333:&quot;\\n                   &quot;33333:&quot;\\n                   &quot;03330:&quot;\\n                   &quot;00300&quot;))\n" +
-    "        sleep(500)\n" +
+    "        sleep(500)" +
     "        display.show(Image(&quot;01010:&quot;\\n                   &quot;11111:&quot;\\n                   &quot;11111:&quot;\\n                   &quot;01110:&quot;\\n                   &quot;00100&quot;))\\n" +
     "        sleep(500)";
   var parsonsPuzzle = new ParsonsWidget({
