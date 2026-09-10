@@ -25,8 +25,8 @@ title: Creating an animation
     "        display.show(Image.HEART)\n" +
     "        sleep(500)\n" +
     "        display.show(Image(&quot;07070:&quot;\\n                   &quot;77777:&quot;\\n                   &quot;77777:&quot;\\n                   &quot;07770:&quot;\\n                   &quot;00700&quot;))\\n" +
-    "        sleep(500)\\n" +
-    "        display.show(Image(&quot;05050:&quot;\n                   &quot;55555:&quot;\\n                   &quot;55555:&quot;\\n                   &quot;05550:&quot;\\n                   &quot;00500&quot;))\\n" +
+    "        sleep(500)\n" +
+    "        display.show(Image(&quot;05050:&quot;\\n                   &quot;55555:&quot;\\n                   &quot;55555:&quot;\\n                   &quot;05550:&quot;\\n                   &quot;00500&quot;))\\n" +
     "        sleep(500)\\n" +
     "        display.show(Image(&quot;03030:&quot;\\n                   &quot;33333:&quot;\\n                   &quot;33333:&quot;\\n                   &quot;03330:&quot;\\n                   &quot;00300&quot;))\n" +
     "        sleep(500)\n" +
