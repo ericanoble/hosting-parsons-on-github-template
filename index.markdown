@@ -7,6 +7,8 @@ title: Parsons Puzzles
 [1_1_C1 Showing a number](./parsons/microbit/1_1_C1_ShowNumber.html)
 
 [1_1_C2 Showing a string](./parsons/microbit/1_1_C2_ShowString.html)
+
+[1_1_oop](./parsons/microbit/1_1_oop.html)
 ### 1.2 Using Buttons
 [1_2_C1 Showing your names](./parsons/microbit/1_2_C1_ShowNames.html)
 
